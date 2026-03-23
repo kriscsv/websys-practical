@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Pizza Form</title>
+</head>
+
+<body>
+
+<!--HEADING-->
+<h1>PIZZA BY THE SLICE</h1>
+   <p>Thank you for visiting our store. Kindly fill out the order form for your order to be    processed and delivered.</p>
+
+<form>
+<!--customer info-->
+<!--name-->
+<h2>Personal Details</h2>
+<label for="name">Full Name:</label>
+<input type="text" id="name" name="name" minlength="6" maxlength="60" placeholder="ex. Juan Dela Cruz" required/>
+
+<!--email-->
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="ex. juandelacruz@email.com" required/>
+
+<!--phone-->
+<label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{7, 11}" placeholder="XXXX-XXX-XXXX"required/>
+
+<!--age-->
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" min="1" max="99" required/>
+
+
+<!--pizza size-->
+<h2>Pizza Size</h2>
+
+<label><input type="radio" id="pizza-size" value="small">Small</label>
+<label><input type="radio" id="pizza-size" value="medium" checked>Medium</label>
+<label><input type="radio" id="pizza-size" value="large">Large</label>
+<label><input type="radio" id="pizza-size" value="xl">Extra Large</label>
+
+
+<!--pizza crust-->
+<h2>Pizza Crust Type</h2>
+
+<label for="crust">Crust:</label>
+<select>
+<option id="">-- Choose a Crust --</option>
+<option id="crust">Thin</option>
+<option id="crust">Thick</option>
+<option id="crust">Thin</option>
+<option id="crust">Stuffed</option>
+<option id="crust">Glutten-Free</option>
+</select>
+
+
+<!--pizza sauce-->
+<h2>Pizza Sauce</h2>
+
+<select>
+<option id="">-- Choose a Sauce --</option>
+<optgroup label="Classic">
+<option id="crust">Tomato</option>
+<option id="crust">White Garlic</option>
+</optgroup>
+<optgroup label="Special">
+<option id="crust">Pesto</option>
+<option id="crust">Barbeque</option>
+</optgroup>
+</select>
+
+<!--toppings-->
+<h2>Toppings</h2>
+
+<label><input type="checkbox" id="pizza-size" value="cheese" disabled checked>Cheese</label>
+<label><input type="checkbox" id="pizza-size" value="pepperoni">Pepperoni</label>
+<label><input type="checkbox" id="pizza-size" value="mushrooms">Mushrooms</label>
+<label><input type="checkbox" id="pizza-size" value="onions">Onions</label>
+<label><input type="checkbox" id="pizza-size" value="bellpepper">Bell Pepper</label>
+<label><input type="checkbox" id="pizza-size" value="olives">Olives</label>
+<label><input type="checkbox" id="pizza-size" value="bacon">Bacon</label>
+<label><input type="checkbox" id="pizza-size" value="pineapple">Pineapple</label>
+
+<!--delivery-->
+<h2>Deivery Method</h2>
+<label><input type="radio" id="address" value="delivery">Home Delivery</label>
+<label><input type="radio" id="address" value="pickup">Store Pickup</label>
+<br><br>
+<label for="address">Deliver your Pizza to:</label>
+<textarea id="address" row="3" placeholder="Enter your full delivery address here."></textarea>
+
+<!--payment-->
+<h2>Payment Information</h2>
+<fieldset>
+
+<legend>Payment Details</legend>
+
+<label for="payment">Payment Method:</label>
+<select>
+<option id="">-- Choose Payment --</option>
+<option id="payment">Credit Card</option>
+<option id="payment">Gcash</option>
+<option id="payment">Cash on Delivery</option>
+</select>
+
+<label for="cc">Card Number (Required for Credit Card Only):</label>
+<input type="text" id="cc" name="cc" pattern="[0-16]{16}" placeholder="1234567879123456">
+
+</fieldset>
+
+<!--summary-->
+<h2>Order Summary</h2>
+
+<table border="1.0">
+   <thead>
+      <tr>
+	<th>Size</th>
+	<th>Base Price</th>
+	<th>Extra Toppings (each)</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+	<td>Small</td>
+	<td>₱199</td>
+	<td>+₱20</td>
+      </tr>
+	<tr>
+	<td>Medium</td>
+	<td>₱299</td>
+	<td>+₱25</td>
+      </tr>
+      <tr>
+	<td>Large</td>
+	<td>₱399</td>
+	<td>+₱30</td>
+      </tr>
+     <tr>
+	<td>Extra Large</td>
+	<td>₱499</td>
+	<td>+₱35</td>
+      </tr>
+
+   </tbody>
+</table>
+
+<!--order submit-->
+<button type="submit">Place My Order</button>
+<button type="reset">Start Over</button>
+</form>
+
+</body>
+</html>

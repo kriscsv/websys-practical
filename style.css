@@ -1,0 +1,10 @@
+body{
+font-family: Helvetica, sans-serif;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+}
+h2{
+padding-bottom: 6px;
+
+}
